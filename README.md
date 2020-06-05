@@ -1,2 +1,2 @@
 # Problem-Solving-
-Different mathematical, statistical and daily problems, solved with C++, Python and Java
+Different mathematical, statistical and daily problems, solved with C++, C, Python and Java
