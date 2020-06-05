@@ -32,23 +32,28 @@ int main(void)
 
     for (int i = 0; i < digitsCount; i++)
     {
-        digitsArray[i] = number % 10;
-        number = number / 10;
+        digitsArray[i] = number % 10; //this takes the residual as digit
+        number = number / 10; //this divide the long number, obtaining a new long without the last residual
     }
 
-    //Sum digits
+    //Sum digits according to Luhn's Algorithm
     int sum = sumValues(digitsArray, digitsCount);
 
 
-    //Check if is valid and return what type of card is (VISA, AMEX...)
+    //Check if the number is valid and return what type of card is (VISA, AMEX...)
     string type = checkType(digitsArray, sum, digitsCount);
 
     //Prints the result
     printf("%s\n", type);
 
 }
+//End of the main function
 
-//function to check if the input is valid
+
+//Begin of auxiliar functions 
+
+
+//Function to check if the input is valid
 long get_correct_long(void)
 {
     long cardNumber;
@@ -57,12 +62,12 @@ long get_correct_long(void)
     {
         cardNumber = get_long("Number: ");
     }
-    while (cardNumber < 0); //if has hyphens ask for another input
+    while (cardNumber < 0); //if the input has hyphens ask for another input
 
     return cardNumber;
 }
 
-//function to determine the amount of digits of the long number
+//Function to determine the amount of digits of the long number
 int getNumberOfDigits(long cardNumber)
 {
     int count = 0;
@@ -75,7 +80,7 @@ int getNumberOfDigits(long cardNumber)
     return count;
 }
 
-//function to sum each other value on the array
+//Function to sum each other value on the array (according with Luhn's Algorithm
 int sumValues(int digitsArray[], int count)
 {
     int sum1 = 0; //variable to store the sum of each other value (digits)
@@ -115,8 +120,7 @@ int sumValues(int digitsArray[], int count)
 }
 
 
-
-//we check what type of card is and if it valid
+//Function to check what type of card is and if it valid
 string checkType(int digitsArray[], int sum, int count)
 {
     string type = "";
