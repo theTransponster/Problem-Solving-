@@ -1,6 +1,6 @@
 //This is a code to solve the problem "Credit", which is part of the Problem Set 1, 
 //within the course CS50 (from Harvard Open Course ware).
-//The main intention of this code is to detect if a credit card number is valid or fake, trough the 
+//The main intention of this code is to detect if a credit card number is valid or fake, through the 
 //study of long numbers. 
 //For more information of the problem, go to: https://cs50.harvard.edu/x/2020/weeks/1/
 
