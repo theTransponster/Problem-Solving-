@@ -52,7 +52,6 @@ int main(void)
 
 //Begin of auxiliar functions 
 
-
 //Function to check if the input is valid
 long get_correct_long(void)
 {
@@ -80,13 +79,11 @@ int getNumberOfDigits(long cardNumber)
     return count;
 }
 
-//Function to sum each other value on the array (according with Luhn's Algorithm
+//Function to sum each other value on the array (according with Luhn's Algorithm)
 int sumValues(int digitsArray[], int count)
 {
     int sum1 = 0; //variable to store the sum of each other value (digits)
     int tmp = 0; //temporal value
-
-
 
     for (int i = 1; i < count; i = i + 2)
     {
@@ -104,14 +101,12 @@ int sumValues(int digitsArray[], int count)
 
     }
 
-
     int sum2 = 0; // variable to store the sum of remaining values
 
     for (int i = 0; i < count; i = i + 2)
     {
         sum2 += digitsArray[i]; //By Luhn's rule, these values aren't multiplied by 2
     }
-
 
     int sumTot = sum1 + sum2;
 
@@ -120,7 +115,7 @@ int sumValues(int digitsArray[], int count)
 }
 
 
-//Function to check what type of card is and if it valid
+//Function to check what type of card is and if it is valid
 string checkType(int digitsArray[], int sum, int count)
 {
     string type = "";
@@ -156,3 +151,4 @@ string checkType(int digitsArray[], int sum, int count)
     return type;
 
 }
+//End of code
