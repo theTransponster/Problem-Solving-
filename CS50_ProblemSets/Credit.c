@@ -7,7 +7,7 @@
 #include <stdio.h>
 #include <cs50.h> //This library belongs to the course 
 
-//Functions template that are implemented afte main function
+//Functions template that are implemented after main function
 long get_correct_long(void);
 
 int getNumberOfDigits(long cardNumber);
